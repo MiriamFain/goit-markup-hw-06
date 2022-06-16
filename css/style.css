@@ -472,6 +472,9 @@ img {
   background-image: url(../images/Vector.svg);
   background-color: var(--accent-color);
   background-repeat: no-repeat;
+  box-sizing: border-box;
+  background-size: contain;
+  background-position: center;
 }
 
 .form-input:hover,
