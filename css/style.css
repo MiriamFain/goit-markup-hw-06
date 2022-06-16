@@ -468,13 +468,10 @@ img {
 
 .checkbox:checked + .checkbox-icon {
   display: inline-block;
-  margin-right: 9px;
-  width: 16px;
-  height: 15px;
-  border: 2px solid var(--accent-color);
-  border-radius: 2px;
+  border-color: transparent;
   background-image: url(../images/Vector.svg);
   background-color: var(--accent-color);
+  background-repeat: no-repeat;
 }
 
 .form-input:hover,
