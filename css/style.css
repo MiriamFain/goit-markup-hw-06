@@ -142,8 +142,8 @@ img {
 }
 
 .site-nav .item::after {
-  transform: scale(0.5);
-  transition-property: transform;
+  opacity: 0;
+  transition-property: opacity;
   transition-duration: 250ms;
   transition-timing-function: var(--timing-function);
 }
@@ -163,6 +163,7 @@ img {
   height: 4px;
   background: #2196f3;
   border-radius: 2px;
+  opacity: 1;
 }
 
 .header .current {
@@ -379,6 +380,7 @@ img {
   font-size: 12px;
   letter-spacing: 0.01em;
   color: var(--text-color);
+  position: relative;
 }
 
 .form-input {
@@ -387,7 +389,32 @@ img {
   margin-bottom: 10px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  padding-left: 15px;
+  padding-left: 42px;
+
+  transition-property: border;
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
+}
+
+.form-icon {
+  position: absolute;
+  top: 50%;
+  left: 11px;
+
+  transform: translateY(-40%);
+
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  fill: #000;
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
+}
+
+.form-input:focus ~ .form-icon {
+  fill: var(--accent-color);
 }
 
 .form-input-comment {
@@ -401,9 +428,9 @@ img {
 }
 
 .form-input-term {
-  display: inline;
-  margin-bottom: 30px;
+  display: inline-block;
   align-items: center;
+  margin-bottom: 30px;
 }
 
 .form-label-term {
@@ -731,8 +758,9 @@ img {
   margin-right: 30px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
+  transform: scale(1);
 
-  transition-property: border;
+  transition-property: border, transform;
   transition-duration: 250ms;
   transition-timing-function: var(--timing-function);
 }
@@ -752,6 +780,7 @@ img {
 .client-item:hover,
 .client-item:focus {
   border: 1px solid var(--accent-color);
+  transform: scale(1.25);
 }
 
 .client-link:hover .client-icon,
@@ -820,7 +849,8 @@ img {
   color: var(--accent-color);
 }
 
-.footer-social-text {
+.footer-social-text,
+.footer-email-text {
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
@@ -872,6 +902,42 @@ img {
   background-color: var(--accent-color);
 }
 
+.footer-form-input {
+  width: 360px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  padding-left: 15px;
+  background-color: inherit;
+  display: flex;
+  margin-right: 10px;
+  transition-property: border;
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
+}
+
+.footer-email {
+  margin-left: 95px;
+}
+
+.footer-form {
+  display: flex;
+  align-items: center;
+}
+
+.footer-btn {
+  margin-left: 12px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-send {
+  fill: #fff;
+  margin-left: 10px;
+  text-align: center;
+}
 /*-----------------------------GALLERY------------------------*/
 
 .gallery-list {
