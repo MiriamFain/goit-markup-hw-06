@@ -486,11 +486,21 @@
             </li>
           </ul>
         </div>
-        <div>
-          <h3 class="footer-social-text">Подпишитесь на рассылку</h3>
-          <form action="">
-            <input class="form-imput" type="email" placeholder="E-mail">
-            <button type="button" class="button primary">Подписаться</button>
+        <div class="footer-email">
+          <h3 class="footer-email-text">Подпишитесь на рассылку</h3>
+          <form action="" class="footer-form">
+            <input
+              class="footer-form-input"
+              type="email"
+              placeholder="E-mail"
+            />
+            <button type="submit" class="button primary footer-btn">
+              Подписаться
+              <span
+                ><svg class="icon-send" width="24" height="24">
+                  <use href="./images/icons.svg#icon-icon-send"></use></svg
+              ></span>
+            </button>
           </form>
         </div>
       </div>
@@ -503,20 +513,71 @@
           </svg>
         </button>
         <form class="form js-speaker-form">
-        <p class="form-title">Оставьте свои данные, мы вам перезвоним</p>
-        <div class="form-field">
-        <label class="form-label" for="name">Имя</label>
-          <input class="form-input" type="text" name="user-name" id="name" autofocus >
-          <div class="form-field"><label class="form-label"  for="telephone">Телефон</label>
-          <input class="form-input" type="tel" name="user-telephone" id="telephone" ></div>
-          <div class="form-field"> <label class="form-label"  for="email">Почта</label>
-          <input class="form-input"  name="user-email" id="email"></div>
-          <div class="form-field"><label class="form-label" for="comment">Комментарий</label>
-        <textarea class="form-input-comment" type="text" name="user-comment" id="comment" placeholder="Введите текст"></textarea></div>
-        <div class="form-input-term"><input type="checkbox" id="term" value="term">
-        <label class="form-label-term" for="term">Соглашаюсь с рассылкой и принимаю <a href="/" class="term">Условия договора</a></label></div>
-        <button type="button" class="button primary">Отправить</button>
-      </form>
+          <p class="form-title">Оставьте свои данные, мы вам перезвоним</p>
+
+          <div class="form-field">
+            <label class="form-label label-name" for="name">Имя</label>
+            <input
+              class="form-input"
+              type="text"
+              name="user-name"
+              id="name"
+              required
+              autofocus
+            />
+            <span class="form-icon">
+              <svg class="icon" width="20" height="20">
+                <use href="./images/icons.svg#icon-person"></use>
+              </svg>
+            </span>
+          </div>
+
+          <div class="form-field">
+            <label class="form-label" for="telephone">Телефон</label>
+            <input
+              class="form-input"
+              type="tel"
+              name="user-telephone"
+              id="telephone"
+              required
+              maxlength="10"
+              pattern="[\+]\d{2}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}"
+            /><span class="form-icon">
+              <svg class="icon" width="20" height="20">
+                <use href="./images/icons.svg#icon-phone"></use>
+              </svg>
+            </span>
+          </div>
+
+          <div class="form-field">
+            <label class="form-label" for="email">Почта</label>
+            <input class="form-input" name="user-email" id="email" />
+            <span class="form-icon">
+              <svg class="icon" width="20" height="20">
+                <use href="./images/icons.svg#icon-email"></use>
+              </svg>
+            </span>
+          </div>
+
+          <div class="form-field">
+            <label class="form-label" for="comment">Комментарий</label>
+            <textarea
+              class="form-input-comment"
+              type="text"
+              name="user-comment"
+              id="comment"
+              placeholder="Введите текст"
+            ></textarea>
+          </div>
+          <div class="form-input-term">
+            <label class="form-label-term"
+              ><input type="checkbox" value="term" class="checkbox" />
+              <span class="checkbox-icon"> </span>Соглашаюсь с рассылкой и
+              принимаю <a href="/" class="term">Условия договора</a></label
+            >
+          </div>
+          <button type="submit" class="button primary">Отправить</button>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>
